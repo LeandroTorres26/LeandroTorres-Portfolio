@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Leandro Torres</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/nav.js" async></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Leandro Torres</a>
+            <ul class="menu">
+                <li class="menu__items"><p onclick="scrollProjetos()">Projetos</p></li>
+                <li class="menu__items"><p onclick="scrollSkills()">Habilidades</p></li>
+                <li class="menu__items"><p onclick="scrollContato()">Contato</p></li>
+            </ul>
+        </nav>
+        <div class="destaque">
+            <div class="destaque__titulo">
+                <h1>Olá</h1>
+                <h1>Eu faço sites :)</h1>
+            </div>
+            <div class="destaque__chamada">
+                <img src="image/hand-down.svg" alt="Mão apontando para baixo" class="destaque__chamada--icone" />
+                <h3 class="destaque__chamada--texto">Dá uma olhada</h3>
+            </div>
+            <svg class="scroll" width="60" height="100" viewBox="0 0 60 100">
+                <defs>
+                    <style>
+                        .a,
+                        .d {
+                            fill: none;
+                        }
+
+                        .a {
+                            stroke: #fff;
+                            stroke-width: 4.5px;
+                        }
+
+                        .b {
+                            fill: #fff;
+                        }
+
+                        .c {
+                            stroke: none;
+                        }
+                    </style>
+                </defs>
+                <g transform="translate(-226 -789)">
+                    <g class="a" transform="translate(226 789)">
+                        <rect class="c" width="60" height="100" rx="30" />
+                        <rect class="d" x="2.25" y="2.25" width="55.5" height="95.5" rx="27.75" />
+                    </g>
+                    <ellipse class="b circle" cx="14" cy="13.5" rx="14" ry="13.5" transform="translate(242 812)" />
+                </g>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <section class="projetos projetos__destaque">
+            <div class="projetos__destaque--container">
+                <div class="projetos__info esquerdo">
+                    <div class="inner transition-projeto-destaque">
+                        <p class="projetos__info--subtitulo">Projeto que participei</p>
+                        <h1 href="#" class="projetos__info--titulo">Meet Your Pet</h1>
+                        <p class="projetos__info--desc">
+                            Site de adoção e relacionamento de pets desenvolvido para o TCC
+                            do curso de Técnico em Informática da Etec.
+                        </p>
+                    </div>
+                </div>
+                <img src="./image/myp-desktop.jpg" alt="Layout do Meet Your Pet"
+                    class="projetos__imagem direito transition-projeto-destaque" />
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <div class="skills-container">
+                <ul>
+                    <li class="card transition-skills">
+                        <div class="card__icone um">
+                            <img src="./image/ux-design.svg" alt="Icone de User Experience Design" />
+                        </div>
+                        <p class="card__titulo">UI UX Design</p>
+                        <p class="card__desc">
+                            Interfaces planejadas utilizando conceitos de User Interface e
+                            User Experience
+                        </p>
+                    </li>
+                    <li class="card transition-skills">
+                        <div class="card__icone dois">
+                            <img src="./image/front-end.svg" alt="Icone de Front End" />
+                        </div>
+                        <p class="card__titulo">Desenvolvimento Front-End</p>
+                        <p class="card__desc">
+                            Desenvolvimento web de forma moderna utilizando as ultimas
+                            novidades do mercado
+                        </p>
+                    </li>
+                    <li class="card transition-skills">
+                        <div class="card__icone tres">
+                            <img src="./image/responsividade.svg" alt="Icone de Front End" />
+                        </div>
+                        <p class="card__titulo">Responsividade e Acessibilidade</p>
+                        <p class="card__desc">
+                            Sites que se adaptam ao aparelho e acessíveis para portadores de
+                            deficiência
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="projetos" id="projetos">
+            <div class="projetos__container transition-projetos">
+                <div class="projetos__info esquerdo">
+                    <div class="inner">
+                        <p class="projetos__info--subtitulo">Loja de Roupas</p>
+                        <a href="#" class="projetos__info--titulo">Delt</a>
+                        <p class="projetos__info--desc">
+                            Protótipo de uma loja de roupas com filtro por cor, tamanho e
+                            preço utilizando JSON
+                        </p>
+                    </div>
+                </div>
+                <img src="./image/Delt-desktop.jpg" alt="Layout da Delt" class="projetos__imagem direito" />
+            </div>
+            <div class="projetos__container transition-projetos">
+                <div class="projetos__info esquerdo">
+                    <div class="inner">
+                        <p class="projetos__info--subtitulo">Aplicativos sob medida</p>
+                        <a href="#" class="projetos__info--titulo">Apeperia</a>
+                        <p class="projetos__info--desc">
+                            Site desenvolvido durante curso online de Sass e Compass
+                        </p>
+                    </div>
+                </div>
+                <img src="./image/apeperia-desktop.jpg" alt="Layout da Delt" class="projetos__imagem direito" />
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contato" id="contato">
+            <p>Quer saber mais?</p>
+            <a class="contato__link" href="mailto:leandro_st00@hotmail.com">Entre em contato</a>
+        </div>
+        <div class="rodape">
+            <div class="sobre">
+                <img src="./image/minha-foto.jpg" alt="Foto do Leandro" class="sobre__foto" />
+                <div class="sobre__info">
+                    <h1 class="sobre__titulo">Sobre mim</h1>
+                    <p class="sobre__texto">
+                        Apaixonado por desenvolvimento web e sempre buscando me aprimorar
+                        e aprender coisas novas.
+                    </p>
+                </div>
+            </div>
+            <div class="redes">
+                <a class="redes__link" href="https://github.com/LeandroTorres26" target="_blank"><img
+                        src="./image/github.svg" alt="Ícone do GitHub" /></a>
+                <a class="redes__link" href="https://www.linkedin.com/in/leandro-torres-front-end/" target="_blank"><img
+                        src="./image/linkedin.svg" alt="ícone do LinkedIn" /></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js" integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg==" crossorigin="anonymous"></script>
+    <script src="js/animation.js" async></script>
+</body>
+
+</html>

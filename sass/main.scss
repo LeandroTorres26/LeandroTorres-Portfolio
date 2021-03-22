@@ -1,0 +1,40 @@
+// Helpers
+@import "abstracts/variaveis.scss";
+@import "abstracts/mixins.scss";
+
+// Layout
+@import "layouts/header.scss";
+@import "layouts/projetos.scss";
+@import "layouts/skills.scss";
+@import "layouts/footer.scss";
+
+html {
+  text-size-adjust: none;
+}
+
+body {
+  background-color: $background;
+  color: $branco;
+  font-family: $poppins;
+  overflow-x: hidden;
+}
+
+a {
+  color: $branco;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
