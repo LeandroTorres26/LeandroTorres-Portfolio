@@ -1,15 +1,16 @@
 // Helpers
-@import "abstracts/variaveis.scss";
-@import "abstracts/mixins.scss";
+@import "abstracts/_variaveis.scss";
+@import "abstracts/_mixins.scss";
 
 // Layout
-@import "layouts/header.scss";
-@import "layouts/projetos.scss";
-@import "layouts/skills.scss";
-@import "layouts/footer.scss";
+@import "layouts/_header.scss";
+@import "layouts/_projetos.scss";
+@import "layouts/_skills.scss";
+@import "layouts/_footer.scss";
 
 html {
   text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,6 +18,10 @@ body {
   color: $branco;
   font-family: $poppins;
   overflow-x: hidden;
+}
+
+h1 {
+  margin: 0;
 }
 
 a {

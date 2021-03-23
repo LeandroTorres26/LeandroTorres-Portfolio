@@ -10,17 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <script src="js/nav.js" async></script>
 </head>
 
 <body>
-    <header>
-        <nav class="nav-container">
-            <a href="index.html" class="logo">Leandro Torres</a>
+    <header id="topo" title="Cabeçalho">
+        <nav class="nav-container" id="nav">
+            <a href="#topo" class="logo">Leandro Torres</a>
             <ul class="menu">
-                <li class="menu__items"><p onclick="scrollProjetos()">Projetos</p></li>
-                <li class="menu__items"><p onclick="scrollSkills()">Habilidades</p></li>
-                <li class="menu__items"><p onclick="scrollContato()">Contato</p></li>
+                <li class="menu__items"><a href="#projetos">Projetos</a></li>
+                <li class="menu__items"><a href="#skills">Habilidades</a></li>
+                <li class="menu__items"><a href="#contato">Contato</a></li>
             </ul>
         </nav>
         <div class="destaque">
@@ -33,6 +32,7 @@
                 <h3 class="destaque__chamada--texto">Dá uma olhada</h3>
             </div>
             <svg class="scroll" width="60" height="100" viewBox="0 0 60 100">
+                <title>Arraste pra baixo</title>
                 <defs>
                     <style>
                         .a,
@@ -64,12 +64,12 @@
             </svg>
         </div>
     </header>
-    <main>
-        <section class="projetos projetos__destaque">
+    <main title="Conteúdo Principal">
+        <section class="projetos projetos__destaque" title="Seção de projeto destaque">
             <div class="projetos__destaque--container">
                 <div class="projetos__info esquerdo">
                     <div class="inner transition-projeto-destaque">
-                        <p class="projetos__info--subtitulo">Projeto que participei</p>
+                        <h2 class="projetos__info--subtitulo">Projeto que participei</h2>
                         <h1 href="#" class="projetos__info--titulo">Meet Your Pet</h1>
                         <p class="projetos__info--desc">
                             Site de adoção e relacionamento de pets desenvolvido para o TCC
@@ -81,9 +81,9 @@
                     class="projetos__imagem direito transition-projeto-destaque" />
             </div>
         </section>
-        <section class="skills" id="skills">
+        <section class="skills" title="Seção de habilidades">
             <div class="skills-container">
-                <ul>
+                <ul id="skills">
                     <li class="card transition-skills">
                         <div class="card__icone um">
                             <img src="./image/ux-design.svg" alt="Icone de User Experience Design" />
@@ -110,19 +110,18 @@
                         </div>
                         <p class="card__titulo">Responsividade e Acessibilidade</p>
                         <p class="card__desc">
-                            Sites que se adaptam ao aparelho e acessíveis para portadores de
-                            deficiência
+                            Sites que se adaptam ao aparelho e acessíveis para PcD
                         </p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="projetos" id="projetos">
+        <section class="projetos" id="projetos" title="Seção de projetos">
             <div class="projetos__container transition-projetos">
                 <div class="projetos__info esquerdo">
                     <div class="inner">
-                        <p class="projetos__info--subtitulo">Loja de Roupas</p>
-                        <a href="#" class="projetos__info--titulo">Delt</a>
+                        <h2 class="projetos__info--subtitulo">Loja de Roupas</h2>
+                        <h1 href="#" class="projetos__info--titulo">Delt</h1>
                         <p class="projetos__info--desc">
                             Protótipo de uma loja de roupas com filtro por cor, tamanho e
                             preço utilizando JSON
@@ -134,18 +133,18 @@
             <div class="projetos__container transition-projetos">
                 <div class="projetos__info esquerdo">
                     <div class="inner">
-                        <p class="projetos__info--subtitulo">Aplicativos sob medida</p>
-                        <a href="#" class="projetos__info--titulo">Apeperia</a>
+                        <h2 class="projetos__info--subtitulo">Aplicativos sob medida</h2>
+                        <h1 href="#" class="projetos__info--titulo">Apeperia</h1>
                         <p class="projetos__info--desc">
                             Site desenvolvido durante curso online de Sass e Compass
                         </p>
                     </div>
                 </div>
-                <img src="./image/apeperia-desktop.jpg" alt="Layout da Delt" class="projetos__imagem direito" />
+                <img src="./image/apeperia-desktop.jpg" alt="Layout da Apeperia" class="projetos__imagem direito" />
             </div>
         </section>
     </main>
-    <footer>
+    <footer title="Rodapé">
         <div class="contato" id="contato">
             <p>Quer saber mais?</p>
             <a class="contato__link" href="mailto:leandro_st00@hotmail.com">Entre em contato</a>

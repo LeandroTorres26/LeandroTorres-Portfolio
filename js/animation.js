@@ -40,3 +40,23 @@ gsap.from(".transition-projetos", {
     duration: 1.2,
     stagger: .3
 })
+
+var nav = document.getElementById("nav");
+
+window.onscroll = function() {
+  "use strict";
+  if (document.body.scrollTop >= 180 || document.documentElement.scrollTop >= 180) {
+    nav.classList.add("nav-scroll");
+  } else {
+    nav.classList.remove("nav-scroll");
+  }
+};
+
+window.onload = function() {
+    "use strict";
+    if (document.body.scrollTop >= 180 || document.documentElement.scrollTop >= 180) {
+      nav.classList.add("nav-scroll");
+    } else {
+      nav.classList.remove("nav-scroll");
+    }
+  };

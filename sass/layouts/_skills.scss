@@ -1,0 +1,106 @@
+.skills {
+  background-color: $skills-section;
+}
+
+.skills-container ul .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $background;
+  border-radius: 1em;
+  padding: 2em;
+  margin-bottom: 1em;
+
+  &__icone {
+    height: 100px;
+    display: grid;
+    place-content: center;
+    margin: 0 auto;
+
+    &.um {
+      width: 7em;
+    }
+    &.dois {
+      width: 6em;
+    }
+    &.tres {
+      width: 5em;
+    }
+  }
+
+  &__titulo {
+    font-weight: bold;
+  }
+
+  &__desc {
+    margin-bottom: 2em;
+    max-width: 20ch;
+    line-height: 1.8rem;
+  }
+}
+
+@include tablet() {
+  /*---------------
+      Habilidades
+   ----------------*/
+
+  .skills {
+    margin-bottom: 5em;
+  }
+
+  .skills-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+
+  .skills-container ul .card {
+    margin-bottom: -5em;
+    padding: 2em 3em 0 3em;
+  }
+}
+
+@include desktop() {
+  /*------------------------
+          Habilidades
+  -------------------------*/
+
+  .skills {
+    background-color: inherit;
+    position: relative;
+  }
+
+  .skills::before {
+    content: "";
+    z-index: -1;
+    display: block;
+    width: 140vw;
+    height: 55em;
+    background-color: $skills-section;
+    position: absolute;
+    top: 0;
+    left: -20%;
+    bottom: -10%;
+    right: 0;
+    transform: rotate(15deg);
+  }
+
+  .skills-container {
+    margin-top: 5em;
+
+    ul {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 5em;
+      .card {
+        margin-bottom: 0;
+        min-height: 25em;
+        display: flex;
+        justify-content: center;
+
+        &__titulo {
+          max-width: 16ch;
+        }
+      }
+    }
+  }
+}

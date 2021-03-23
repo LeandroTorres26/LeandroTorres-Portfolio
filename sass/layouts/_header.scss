@@ -1,0 +1,224 @@
+header {
+  background-image: url(../image/imagem-background.jpg);
+  background-color: rgba($background, 0.3);
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-position: left 35% bottom 70%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0 0.5em 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-tap-highlight-color: transparent;
+
+  .logo {
+    display: block;
+    padding: 0 1em;
+    font-size: 0.85rem;
+    color: $destaque;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.8em;
+  }
+
+  .menu {
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    &__items {
+      padding: 0 1em;
+    }
+  }
+}
+
+.nav-scroll {
+  background-color: rgba($background, 0.8);
+}
+
+.destaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em 1em 5em 1em;
+
+  &__titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5em 0;
+
+    h1:nth-child(1) {
+      font-size: 3.2rem;
+      margin: 0 0 0.5em 0;
+    }
+    h1:nth-child(2) {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+  }
+
+  &__chamada {
+    display: flex;
+    margin: 0 0 5em 0;
+
+    &--icone {
+      width: 0.8rem;
+    }
+    &--texto {
+      margin: 0;
+      padding: 0 0.5em;
+      color: $destaque;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+
+  .scroll {
+    width: 2em;
+    height: auto;
+  }
+
+  .circle {
+    animation: circleAnim 1s infinite alternate-reverse;
+  }
+
+  @keyframes circleAnim {
+    from {
+      transform: translate(242px, 810px);
+      z-index: 5;
+    }
+    to {
+      transform: translate(242px, 840px);
+    }
+  }
+}
+
+@include tablet() {
+  .nav-container {
+    padding: 1em 3em 1em 3em;
+
+    .logo {
+      font-size: 1.2em;
+    }
+
+    .menu {
+      font-size: 1em;
+    }
+  }
+
+  .destaque {
+    h1:nth-child(1) {
+      font-size: 6rem;
+      margin: 0;
+    }
+
+    h1:nth-child(2) {
+      font-size: 5rem;
+    }
+  }
+}
+
+@include desktop() {
+  header {
+    min-height: 90vh;
+  }
+
+  .nav-container {
+    padding: 1em 5em 1em 5em;
+
+    .logo {
+      font-size: 1rem;
+      padding: 0;
+    }
+
+    .menu {
+      font-size: 1rem;
+
+      &__items {
+        padding: 0 2em;
+      }
+
+      &__items:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .destaque {
+    align-items: flex-start;
+    padding: 5em 0 10em 5em;
+
+    &__titulo {
+      align-items: flex-start;
+      margin-bottom: 5em;
+      line-height: 7rem;
+
+      h1:nth-child(1) {
+        font-size: 6rem;
+        margin: 0;
+      }
+
+      h1:nth-child(2) {
+        font-size: 5rem;
+      }
+    }
+
+    &__chamada {
+      display: flex;
+      margin: 0 0 7em 0;
+
+      &--icone {
+        width: 0.9rem;
+      }
+      &--texto {
+        margin: 0;
+        padding: 0 0.5em;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .destaque .scroll {
+    width: 2.5em;
+  }
+}
+
+@include desktop-large() {
+  header {
+    min-height: 95vh;
+  }
+
+  .nav-container {
+    padding: 1em 10em 1em 10em;
+  }
+  .destaque {
+    align-items: flex-start;
+    padding: 4em 0 10em 10em;
+
+    &__titulo {
+      align-items: flex-start;
+      line-height: 10rem;
+
+      h1:nth-child(1) {
+        font-size: 8rem;
+        margin: 0;
+      }
+
+      h1:nth-child(2) {
+        font-size: 7rem;
+      }
+    }
+  }
+
+  .destaque .scroll {
+    width: 3em;
+  }
+}
