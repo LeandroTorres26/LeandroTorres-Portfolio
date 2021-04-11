@@ -1,22 +1,3 @@
-.contato {
-  text-align: center;
-  padding: 4em 0 2em 0;
-  font-size: 1em;
-
-  p {
-    display: inline-block;
-    font-weight: 500;
-    margin: 0;
-  }
-
-  &__link {
-    display: inline-block;
-    color: $destaque;
-    text-decoration: underline;
-    font-weight: bold;
-  }
-}
-
 .rodape {
   background-color: $footer;
   border-radius: 1em 1em 0 0;
@@ -30,22 +11,15 @@
   margin-bottom: 2em;
 
   &__foto {
-    width: 10em;
-    height: 10em;
+    width: 12em;
+    height: 12em;
     border-radius: 100%;
     object-fit: cover;
   }
 
-  &__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1em;
-  }
-
   &__titulo {
     font-size: 1.5em;
-    margin: 0;
+    margin: 1em 0 0;
   }
 
   &__texto {
@@ -68,29 +42,20 @@
   }
 }
 
-@include tablet() {
-  .contato {
-    padding: 4em 0 2em 0;
-    font-size: 1.2em;
-  }
-}
-
 @include desktop() {
-  .contato {
-    padding: 4em 0 4em 0;
-    font-size: 1.4em;
-  }
-
   .rodape {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding-left: 2em;
     padding-right: 2em;
     height: 45vh;
   }
 
   .sobre {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
     margin-bottom: 0;
 
     &__foto {
@@ -98,16 +63,13 @@
       height: 15em;
       border-radius: 100%;
       object-fit: cover;
-    }
-
-    &__info {
-      align-items: flex-start;
-      margin-left: 2em;
+      grid-row: 1/3;
     }
 
     &__titulo {
       font-size: 2em;
-      margin: 0;
+      margin: 2rem 0 0 1rem;
+      grid-column: 2/3;
     }
 
     &__texto {
@@ -116,7 +78,8 @@
       line-height: 1.8em;
       text-align: left;
       max-width: 35ch;
-      margin: 0;
+      margin: -4rem 0 0 1rem;
+      grid-column: 2/3;
     }
   }
 

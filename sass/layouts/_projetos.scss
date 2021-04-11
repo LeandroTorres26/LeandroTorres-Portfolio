@@ -1,151 +1,147 @@
 .projetos {
-  display: flex;
-  flex-direction: column;
-
-  &__container {
-    margin-bottom: 4em;
-  }
-
-  &__container:last-child {
-    margin-bottom: 0;
-  }
+  padding: 0;
 }
 
-.projetos__info div {
+.projetos__titulo {
+  background-color: $projeto-destaque;
+  padding: 1em 0;
+}
+
+.projetos__container {
+  padding: 0;
+  height: 100vh;
+  margin-bottom: 2em;
+  background-color: rgba(#000, 1);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.organic-io {
+  background-image: url("../../image/organic-mobile.jpg");
+}
+
+.delt {
+  background-image: url("../../image/Delt-mobile.jpg");
+}
+
+.projetos__info {
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  background-color: rgba(#000, 0.5);
+  &--titulo {
+    font-size: 3em;
+  }
+  &--desc {
+    font-size: 1em;
+    width: 30ch;
+    line-height: 1.5;
+  }
 
-  .projetos__info--subtitulo {
-    text-transform: uppercase;
-    color: $destaque;
-    font-size: 0.7rem;
+  &--botao {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid $branco;
+    width: 50%;
+    max-width: 10em;
+    padding: 1em 0;
+    color: $branco;
     font-weight: bold;
-    letter-spacing: 0.2em;
-    margin: 0;
-  }
+    justify-content: center;
 
-  .projetos__info--titulo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 0;
+    img {
+      margin-left: 0.5em;
+      width: 1em;
+      margin-bottom: 0.2em;
+    }
   }
-
-  .projetos__info--desc {
-    width: 70vw;
-    font-size: 0.9em;
-    margin-bottom: 3em;
-    line-height: 1.8em;
-    font-weight: 300;
-    max-width: 30ch;
-  }
-}
-
-.projetos__imagem {
-  border-radius: 0.5em;
-  // border: $destaque solid 1px;
 }
 
 @include tablet() {
-  /*------------------------
-      Projetos/Portfolio
-   -------------------------*/
-
-  .projetos {
-    text-align: left;
-    padding-top: 5em;
-    padding-bottom: 5em;
-
-    &__container,
-    &__destaque--container {
-      display: grid;
-      grid-template-columns: 40% auto;
-    }
-
-    &__container:nth-child(2n) {
-      display: grid;
-      grid-template-columns: auto 40%;
-      text-align: right;
-      margin-left: -2em;
-
-      .esquerdo {
-        order: 2;
-      }
-
-      .direito {
-        order: 1;
-        margin-left: 0;
-        margin-right: 2em;
-      }
-    }
+  .projetos__container {
+    height: 80vh;
+    background-color: rgba(#000, 1);
   }
 
-  .esquerdo {
-    display: grid;
-    place-content: center;
+  .organic-io {
+    background-image: url("../../image/organic-desktop.jpg");
+    background-position: 30% 0%;
   }
 
-  .direito {
-    margin-left: 2em;
-    margin-top: 1em;
+  .delt {
+    background-image: url("../../image/Delt-desktop.jpg");
   }
 
-  .projetos__info div {
-    align-items: flex-start;
-  }
-
-  .projetos__info--desc {
-    margin-bottom: 0;
-  }
-
-  .projetos__container:nth-child(1n) .projetos__info div {
-    align-items: flex-start;
-  }
-
-  .projetos__container:nth-child(2n) .projetos__info div {
-    align-items: flex-end;
+  .projetos__info {
+    height: 80vh;
   }
 }
 
 @include desktop() {
-  .projetos__destaque {
-    background-color: $projeto-destaque;
-    padding: 7em 0 7em 0;
+  .projetos__container {
+    padding: 0;
+    height: 80vh;
+  }
 
-    &--container {
-      align-items: center;
+  .projetos__info {
+    width: 100%;
+    height: 80vh;
+    background-color: transparent;
+    transition: 0.5s;
+
+    &--titulo {
+      display: none;
+    }
+    &--desc {
+      display: none;
+    }
+
+    &--botao {
+      display: none;
     }
   }
 
-  .projetos__info div {
-    .projetos__info--subtitulo {
-      font-size: 0.8em;
-    }
-
-    .projetos__info--desc {
-      font-size: 1.2em;
-      margin-bottom: 0;
-    }
+  .projetos__info:hover {
+    background-color: rgba(#000, 0.5);
+    transition: 0.5s;
   }
 
-  .direito {
-    margin-top: 0;
+  .projetos__info:hover > .projetos__info--titulo,
+  .projetos__info:hover > .projetos__info--desc {
+    display: block;
+    transition: 0.5s;
+  }
+
+  .projetos__info:hover > .projetos__info--botao {
+    display: flex;
+    transition: 0.5s;
   }
 }
 
 @include desktop-large() {
-  .projetos__info div {
-    .projetos__info--subtitulo {
-      font-size: 0.9em;
-    }
+  .organic-io {
+    background-image: url("../../image/organic-desktop.jpg");
+  }
 
-    .projetos__info--titulo {
+  .delt {
+    background-image: url("../../image/delt-desktop.jpg");
+  }
+
+  .projetos__info {
+    &--titulo {
       font-size: 3em;
     }
-
-    .projetos__info--desc {
-      font-size: 1.3em;
-      margin-bottom: 0;
+    &--desc {
+      font-size: 1.5em;
+      width: 30ch;
     }
+  }
+
+  .projetos__info:hover {
+    background-color: rgba(#000, 0.5);
+    transition: 0.5s;
   }
 }

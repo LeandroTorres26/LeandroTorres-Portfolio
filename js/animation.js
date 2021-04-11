@@ -8,9 +8,9 @@ tl.from('.destaque', {
     ease: "power4.out",
 })
 
-gsap.from(".transition-projeto-destaque", {
+gsap.from(".transition-projeto-feature", {
     scrollTrigger: {
-        trigger: '.transition-projeto-destaque',
+        trigger: '.transition-projeto-feature',
         start: "top bottom"
     },
     y: 50,
@@ -30,18 +30,7 @@ gsap.from(".transition-skills", {
     stagger: .3
 })
 
-gsap.from(".transition-projetos", {
-    scrollTrigger: {
-        trigger: '.transition-projetos',
-        start: "top center"
-    },
-    y: 50,
-    opacity: 0,
-    duration: 1.2,
-    stagger: .3
-})
-
-var nav = document.getElementById("nav");
+const nav = document.getElementById("nav");
 
 window.onscroll = function() {
   "use strict";

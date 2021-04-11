@@ -4,8 +4,10 @@
 
 // Layout
 @import "layouts/_header.scss";
-@import "layouts/_projetos.scss";
+@import "layouts/_feature.scss";
 @import "layouts/_skills.scss";
+@import "layouts/_projetos.scss";
+@import "layouts/_contato.scss";
 @import "layouts/_footer.scss";
 
 html {
@@ -40,6 +42,5 @@ img {
 }
 
 section {
-  padding: 4em 2em;
   text-align: center;
 }

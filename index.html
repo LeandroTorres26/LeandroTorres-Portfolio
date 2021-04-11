@@ -10,6 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_2YEziwWIn53MNXgj1DQJD");
+        })();
+    </script>
+    <script src="js/email.js"></script>
 </head>
 
 <body>
@@ -23,10 +30,7 @@
             </ul>
         </nav>
         <div class="destaque">
-            <div class="destaque__titulo">
-                <h1>Olá</h1>
-                <h1>Eu faço sites :)</h1>
-            </div>
+            <h1 class="destaque__titulo">Criando experiências agradáveis ao usuário</h1>
             <div class="destaque__chamada">
                 <img src="image/hand-down.svg" alt="Mão apontando para baixo" class="destaque__chamada--icone" />
                 <h3 class="destaque__chamada--texto">Dá uma olhada</h3>
@@ -65,25 +69,23 @@
         </div>
     </header>
     <main title="Conteúdo Principal">
-        <section class="projetos projetos__destaque" title="Seção de projeto destaque">
-            <div class="projetos__destaque--container">
-                <div class="projetos__info esquerdo">
-                    <div class="inner transition-projeto-destaque">
-                        <h2 class="projetos__info--subtitulo">Projeto que participei</h2>
-                        <h1 href="#" class="projetos__info--titulo">Meet Your Pet</h1>
-                        <p class="projetos__info--desc">
-                            Site de adoção e relacionamento de pets desenvolvido para o TCC
-                            do curso de Técnico em Informática da Etec.
-                        </p>
-                    </div>
+        <section class="feature" title="Seção de projeto destaque">
+            <div class="feature__container">
+                <div class="feature__info transition-projeto-feature">
+                    <h2 class="feature__info--subtitulo">Projeto que participei</h2>
+                    <h1 href="#" class="feature__info--titulo">Meet Your Pet</h1>
+                    <p class="feature__info--desc">
+                        Site de adoção e relacionamento de pets desenvolvido para o TCC
+                        do curso de Técnico em Informática da Etec.
+                    </p>
                 </div>
                 <img src="./image/myp-desktop.jpg" alt="Layout do Meet Your Pet"
-                    class="projetos__imagem direito transition-projeto-destaque" />
+                    class="feature__imagem transition-projeto-feature" />
             </div>
         </section>
         <section class="skills" title="Seção de habilidades">
-            <div class="skills-container">
-                <ul id="skills">
+            <div class="skills__container" id="skills">
+                <ul class="skills__lista">
                     <li class="card transition-skills">
                         <div class="card__icone um">
                             <img src="./image/ux-design.svg" alt="Icone de User Experience Design" />
@@ -116,49 +118,52 @@
                 </ul>
             </div>
         </section>
-        <section class="projetos" id="projetos" title="Seção de projetos">
-            <div class="projetos__container transition-projetos">
-                <div class="projetos__info esquerdo">
-                    <div class="inner">
-                        <h2 class="projetos__info--subtitulo">Loja de Roupas</h2>
-                        <h1 href="#" class="projetos__info--titulo">Delt</h1>
-                        <p class="projetos__info--desc">
-                            Protótipo de uma loja de roupas com filtro por cor, tamanho e
-                            preço utilizando JSON
-                        </p>
-                    </div>
+        <section class="projetos" title="Seção de projetos">
+            <h1 class="projetos__titulo" id="projetos">Projetos</h1>
+            <div class="projetos__container transition-projetos organic-io">
+                <div class="projetos__info">
+                    <h1 class="projetos__info--titulo">Organic.io</h1>
+                    <p class="projetos__info--desc">
+                        Site que ajuda a encontrar produtos naturais perto de você
+                    </p>
+                    <a href="https://organic-io.vercel.app" target="_blank" class="projetos__info--botao">Visitar<img src="./image/link-icon.svg"></a>
                 </div>
-                <img src="./image/Delt-desktop.jpg" alt="Layout da Delt" class="projetos__imagem direito" />
             </div>
-            <div class="projetos__container transition-projetos">
-                <div class="projetos__info esquerdo">
-                    <div class="inner">
-                        <h2 class="projetos__info--subtitulo">Aplicativos sob medida</h2>
-                        <h1 href="#" class="projetos__info--titulo">Apeperia</h1>
-                        <p class="projetos__info--desc">
-                            Site desenvolvido durante curso online de Sass e Compass
-                        </p>
-                    </div>
+            <div class="projetos__container transition-projetos delt">
+                <div class="projetos__info">
+                    <h1 class="projetos__info--titulo">Delt</h1>
+                    <p class="projetos__info--desc">
+                        Protótipo de uma loja de roupas com filtro por cor, tamanho e
+                        preço utilizando JSON
+                    </p>
                 </div>
-                <img src="./image/apeperia-desktop.jpg" alt="Layout da Apeperia" class="projetos__imagem direito" />
+            </div>
+        </section>
+        <section class="contato">
+            <h1 class="contato__titulo">Contato</h1>
+            <div class="contato__form">
+                <label for="nome" class="contato__label">Nome</label>
+                <input type="text" name="from_name" class="contato__input" id="nome">
+
+                <label class="contato__label">Email</label>
+                <input type="email" name="from_email" class="contato__input" id="email">
+
+                <label class="contato__label">Mensagem</label>
+                <textarea type="textarea" name="message" class="contato__input contato__input--mensagem" id="mensagem"></textarea>
+
+                <button class="contato__botao" onclick="enviarEmail()">Enviar</button>
             </div>
         </section>
     </main>
     <footer title="Rodapé">
-        <div class="contato" id="contato">
-            <p>Quer saber mais?</p>
-            <a class="contato__link" href="mailto:leandro_st00@hotmail.com">Entre em contato</a>
-        </div>
         <div class="rodape">
             <div class="sobre">
                 <img src="./image/minha-foto.jpg" alt="Foto do Leandro" class="sobre__foto" />
-                <div class="sobre__info">
-                    <h1 class="sobre__titulo">Sobre mim</h1>
-                    <p class="sobre__texto">
-                        Apaixonado por desenvolvimento web e sempre buscando me aprimorar
-                        e aprender coisas novas.
-                    </p>
-                </div>
+                <h1 class="sobre__titulo">Sobre mim</h1>
+                <p class="sobre__texto">
+                    Apaixonado por desenvolvimento web e sempre buscando me aprimorar
+                    e aprender coisas novas.
+                </p>
             </div>
             <div class="redes">
                 <a class="redes__link" href="https://github.com/LeandroTorres26" target="_blank"><img
