@@ -27,7 +27,8 @@ header {
 
 .nav-container .logo {
   display: block;
-  font-size: 0.85rem;
+  min-width: 2em;
+  width: 4em;
   color: #07f207;
   font-weight: bold;
   text-align: left;
@@ -125,7 +126,7 @@ header {
     padding: 1em 3em 1em 3em;
   }
   .nav-container .logo {
-    font-size: 1.2em;
+    width: 5em;
   }
   .nav-container .menu {
     font-size: 1em;
@@ -143,7 +144,6 @@ header {
     padding: 1em 5em 1em 5em;
   }
   .nav-container .logo {
-    font-size: 1rem;
     padding: 0;
   }
   .nav-container .menu {
