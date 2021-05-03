@@ -54,7 +54,7 @@ header {
   display: grid;
   -ms-grid-rows: auto 1fr 1fr;
       grid-template-rows: auto 1fr 1fr;
-  padding: 5em 1em 5em 1em;
+  padding: 7em 1em 5em 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -132,10 +132,10 @@ header {
     font-size: 1em;
   }
   .destaque {
-    padding: 5em 3em 5em 3em;
+    padding: 7em 3em 5em 3em;
   }
   .destaque__titulo {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -159,8 +159,8 @@ header {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    line-height: 7rem;
-    font-size: 5rem;
+    line-height: 5rem;
+    font-size: 4rem;
     text-align: left;
     margin-bottom: 0.5em;
   }
@@ -196,8 +196,8 @@ header {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    line-height: 9rem;
-    font-size: 7rem;
+    line-height: 6rem;
+    font-size: 5rem;
   }
   .destaque .scroll {
     width: 3em;
@@ -457,6 +457,8 @@ header {
   }
   .skills__lista .card {
     padding: 2em 3em;
+    -webkit-perspective: 5em;
+            perspective: 5em;
   }
 }
 
@@ -851,6 +853,7 @@ html {
       -ms-text-size-adjust: none;
           text-size-adjust: none;
   scroll-behavior: smooth;
+  scroll-padding-top: 31.4833px;
 }
 
 body {
